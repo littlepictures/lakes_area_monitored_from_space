@@ -2,40 +2,46 @@
 <hr>
 
 ## Background on this CLIP
-[SHORT DESCRIPTION ON WHAT THE CLIP SHOWS AND WHY IT MATTERS IN TERMS OF CLIMATE DATAVIZ (500-600 CHARACTERS)]
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at vestibulum nulla, ac tincidunt sem. Morbi in nisl at nisl feugiat faucibus sed eu neque. In fringilla, odio eu porttitor condimentum, tortor leo congue justo, id venenatis metus lectus sed libero. Mauris id arcu eros. Sed orci mauris, tincidunt nec ex non, eleifend pellentesque dolor. Mauris tellus ligula, tincidunt accumsan sapien accumsan, pellentesque rhoncus ex. Phasellus sollicitudin dolor eget porttitor gravida. Integer malesuada vehicula ante, ac interdum felis congue nec. Mauris in sagittis felis. 
-
+This repository contains a Jupyter notebook which conducts an exploratory data analysis on the CCI World's lakes data availability. The notebook handles data preparation and visualization, including generating plots for the distribution of lakes by continent.
 
 ## Data Sources
-[LIST OF ALL DATASOURCES AND SPECIFIC DATASETS USED IN THE CREATION OF THE CLIP]
-
 The CLIP uses the following datasets:
-- [ESA Open Data website](https://climate.esa.int/de/odp/#/dashboard)
+- [ESA CCI LAKE DATA AVAILABILITY](https://climate.esa.int/documents/1704/lakes_cci_v2.0.2_data_availability_shp.zip)
+- [World Continents](https://hub.arcgis.com/datasets/esri::world-continents/explore?location=-0.937843%2C-0.000006%2C2.64)
 
 ## Data Preparation
-[STEP BY STEP DESCRIPTION ON WHAT THE DATA PROCESSING PROCESS. SHOULD BEGIN WITH A SHORT SUMMARY OF THE OVERALL PROCESS]
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at vestibulum nulla, ac tincidunt sem. Morbi in nisl at nisl feugiat faucibus sed eu neque. In fringilla, odio eu porttitor condimentum, tortor leo congue justo, id venenatis metus lectus sed libero. Mauris id arcu eros. Sed orci mauris, tincidunt nec ex non, eleifend pellentesque dolor. Mauris tellus ligula, tincidunt accumsan sapien accumsan, pellentesque rhoncus ex. Phasellus sollicitudin dolor eget porttitor gravida. Integer malesuada vehicula ante, ac interdum felis congue nec. Mauris in sagittis felis. 
+The data preparation phase of the notebook includes several steps:
 
-To prepare the data, follow these steps:
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at vestibulum nulla, ac tincidunt sem. Morbi in nisl at nisl feugiat faucibus sed eu neque. 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at vestibulum nulla, ac tincidunt sem. Morbi in nisl at nisl feugiat faucibus sed eu neque. 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at vestibulum nulla, ac tincidunt sem. Morbi in nisl at nisl feugiat faucibus sed eu neque. 
+1. **Reading Geospatial Data**: The notebook reads two files - one containing information about the world's continents and the other about the world's lakes. These files are read into GeoDataFrames.
 
-## Creating Visualizations
-[STEP BY STEP DESCRIPTION ON WHAT THE DATA PROCESSING PROCESS. SHOULD BEGIN WITH A SHORT SUMMARY OF THE OVERALL PROCESS]
+2. **Coordinate Reference System (CRS) Management**: The notebook checks and sets the CRS of the GeoDataFrames to ensure the geographical data is correctly interpreted.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at vestibulum nulla, ac tincidunt sem. Morbi in nisl at nisl feugiat faucibus sed eu neque. In fringilla, odio eu porttitor condimentum, tortor leo congue justo, id venenatis metus lectus sed libero. Mauris id arcu eros. Sed orci mauris, tincidunt nec ex non, eleifend pellentesque dolor. Mauris tellus ligula, tincidunt accumsan sapien accumsan, pellentesque rhoncus ex. Phasellus sollicitudin dolor eget porttitor gravida. Integer malesuada vehicula ante, ac interdum felis congue nec. Mauris in sagittis felis. 
+3. **Data Cleaning**: Unused columns in the GeoDataFrames are removed to keep the data concise and relevant.
 
-To create a new visualization, follow these steps:
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at vestibulum nulla, ac tincidunt sem. Morbi in nisl at nisl feugiat faucibus sed eu neque. 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at vestibulum nulla, ac tincidunt sem. Morbi in nisl at nisl feugiat faucibus sed eu neque. 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at vestibulum nulla, ac tincidunt sem. Morbi in nisl at nisl feugiat faucibus sed eu neque. 
+4. **Spatial Join**: The lakes GeoDataFrame and the continents GeoDataFrame are spatially joined based on the geographical intersection of the data.
+
+5. **Area Calculation**: The notebook converts the CRS to EPSG 3035 to calculate the area of each polygon in square meters, subsequently converting this to square kilometers.
+
+6. **Data Aggregation**: The notebook groups the data by continent and calculates the sum of lake areas, the count of lakes, and the mean latitude and longitude for each continent.
+
+7. **Data Saving**: The final prepared data is saved as a CSV file for future use.
+
+## Data Visualization
+
+The data visualization phase of the notebook involves creating various charts and posters to represent the lake data effectively:
+
+1. **Lake Count Charts**: The notebook uses Altair to create a donut chart that represents the percentage of total lake count for each continent.
+
+2. **Lake Area Charts**: Similar to the lake count charts, the notebook creates a donut chart to represent the percentage of total lake area for each continent.
+
+3. **Bauhaus Style Posters**: The notebook takes the visualization a step further and creates Bauhaus style posters for both lake count and lake area distributions. These posters include the donut charts and also additional text elements such as a title and details.
+
+The notebook ends with the display of these visualizations, which provide a clear and intuitive understanding of the distribution of lakes across the world's continents.
 
 ## CREDITS & LICENSE
-- Idea by: [INSTITUTION](https://climate.esa.int/)
-- Processing Scripts by: [INSTITUTION](https://climate.esa.int/)
-- Visualization by: [INSTITUTION](https://climate.esa.int/)
+- Idea by: [ESA Climate Office](https://climate.esa.int/)
+- Processing Scripts by: [Ubilabs](https://www.ubilabs.com/)
+- Visualization by: [Ubilabs](https://www.ubilabs.com/)
 
 The code in this repository is published under [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/)
