@@ -2,7 +2,7 @@
 <hr>
 
 ## Background on this CLIP
-This repository contains a Jupyter notebook which conducts an exploratory data analysis on the CCI World's lakes data availability. The notebook handles data preparation and visualization, including generating plots for the distribution of lakes by continent.
+This repository contains a Jupyter notebook which conducts an exploratory data analysis on the CCI World's lakes data availability. The notebook handles data preparation and visualization, including generating plots for the distribution of lakes by continent. The plots take up the spatial arrangement of the continents, but incorporate their own visual effect through orientation and scaling.
 
 ## Data Sources
 The CLIP uses the following datasets:
