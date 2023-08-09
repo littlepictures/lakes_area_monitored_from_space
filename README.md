@@ -1,8 +1,13 @@
-# CLIP - CCI Lakes Dataset
+# little picture - lakes area monitored from space
 <hr>
 
-## Background on this CLIP
-This repository contains a Jupyter notebook which conducts an exploratory data analysis on the CCI World's lakes data availability. The notebook handles data preparation and visualization, including generating plots for the distribution of lakes by continent. The plots take up the spatial arrangement of the continents, but incorporate their own visual effect through orientation and scaling.
+## Background on this little picture
+_lake area varies across continents. These water bodies play a crucial role in local and global ecosystems_
+
+Lakes are key indicators of climate change, capturing its effects directly and indirectly through surrounding areas. To respond and adapt to climate change effectively, we need a global and consistent record of lake data.
+Satellite monitoring of lakes is vital for studying their response to climate change and tracking variations in their extent (or area), surface temperature, and ice cover (and thickness) and biogeochemical process via ‘water leaving reflectance’ over time.
+
+https://climate.esa.int/en/little-pictures-gallery/lakes-monitored-from-space/
 
 ## Data Sources
 The CLIP uses the following datasets:
