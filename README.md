@@ -32,7 +32,7 @@ The data preparation phase of the notebook includes several steps:
 
 7. **Data Saving**: The final prepared data is saved as a CSV file for future use.
 
-## Data Visualization
+## Data Visualisations
 
 The data visualization phase of the notebook involves creating various charts and posters to represent the lake data effectively:
 
