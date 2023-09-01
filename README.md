@@ -47,6 +47,6 @@ The notebook ends with the display of these visualizations, which provide a clea
 ## CREDITS & LICENSE
 - Idea by: [ESA Climate Office](https://climate.esa.int/)
 - Processing Scripts by: [Ubilabs](https://www.ubilabs.com/)
-- Visualization by: [Ubilabs](https://www.ubilabs.com/)
+- Visualisation by: [Ubilabs](https://www.ubilabs.com/)
 
 The code in this repository is published under [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/)
